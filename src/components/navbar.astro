@@ -51,6 +51,9 @@
 
 <script>
   // add classes for mobile navigation toggling
+  // Asegúrate de que esto se ejecute en el momento correcto
+document.addEventListener("DOMContentLoaded", function() {
+      
   var CSbody = document.querySelector("body");
   const CSnavbarMenu = document.querySelector("#cs-navigation");
   const CShamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
@@ -85,6 +88,9 @@
     };
     item.addEventListener("click", onClick);
   }
+});
+
+
 </script>
 
 <style>
