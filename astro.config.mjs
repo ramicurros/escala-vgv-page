@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://ramicurros.github.io/escala-vgv-page/',
+	site: 'https://ramicurros.github.io',
 	base: 'escala-vgv',
 	integrations: [mdx(), sitemap()],
 });
