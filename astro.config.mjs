@@ -8,4 +8,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
 	site: 'https://ramicurros.github.io',
 	integrations: [mdx(), sitemap()],
+	build: {
+		inlineStylesheets: 'always', // Set to always inline stylesheets
+	  },
 });
