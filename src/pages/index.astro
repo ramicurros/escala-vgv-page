@@ -1,0 +1,99 @@
+---
+import Navbar from "../components/navbar.astro";
+import Hero from "../components/hero.astro";
+import Services from "../components/services.astro";
+import Services2 from "../components/services-2.astro";
+import Team from "../components/team.astro";
+import Reviews from "../components/reviews.astro";
+import Contact from "../components/contact.astro";
+import Footer from "../components/footer.astro";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <title>Escala VGV</title>
+    </head>
+    <body>
+        <Navbar />
+        <Hero />
+        <Services />
+        <Team />
+        <Reviews />
+        <Contact />
+        <Footer />
+    </body>
+</html>
+
+<style>
+    :root {
+        /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+        --primary: #ff6937;
+        --primaryLight: #ffba43;
+        --secondary: #100f0f;
+        --secondaryLight: #ffba43;
+        --headerColor: #100f0f;
+        --bodyTextColor: #100f0f;
+        --bodyTextColorWhite: #ffffff;
+        /* 13px - 16px */
+        --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+        /* 31px - 49px */
+        --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+        --bodyFontSize: 1rem;
+        /* 60px - 100px top and bottom */
+        --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    *,
+    *:before,
+    *:after {
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+    }
+    .cs-topper {
+        font-size: var(--topperFontSize);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.25rem;
+        display: block;
+    }
+
+    .cs-title {
+        font-size: var(--headerFontSize);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        max-width: 43.75rem;
+        margin: 0 0 1rem 0;
+        color: var(--headerColor);
+        position: relative;
+    }
+
+    .cs-text {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        max-width: 40.625rem;
+        margin: 0;
+        color: var(--bodyTextColor);
+    }
+</style>
